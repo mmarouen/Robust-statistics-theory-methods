@@ -34,7 +34,7 @@ def figure_4_1():
     plt.plot(line_x, beta_1 * line_x + beta_0, color='k', lw=0.5)
     plt.plot(line_x, beta_1_ * line_x + beta_0_, color='cyan', lw=0.5)
     plt.xlabel('number of shocks')
-    plt.ylabel('average time')
+    plt.ylabel('average response time')
     plt.show()
 
 if __name__ == '__main__':
