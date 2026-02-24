@@ -6,3 +6,9 @@ def get_iqr(data: np.ndarray):
 
 def madn(data: np.ndarray):
     return np.median(np.abs(data - np.median(data))) / 0.675
+
+def mdn(data: np.ndarray):
+    return np.mean(np.abs(data - np.median(data)))
+
+def iqr(data: np.ndarray):
+    return np.percentile(data, 75) - np.percentile(data, 25)
