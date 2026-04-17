@@ -1,6 +1,7 @@
 # Robust Statistics Theory and Methods
 
-This repository contains Python implementations of tables and figures from a well-known statistics textbook. The goal is to provide reproducible, executable code for visualizations and results presented in the book.
+This repository contains Python implementations of tables and figures from the reference textbook !Robust Statistics Theory and Methods!. The goal is to provide reproducible, executable code for visualizations and results presented in the book.\
+Implementation is shared for learning purposes only.
 
 ---
 
