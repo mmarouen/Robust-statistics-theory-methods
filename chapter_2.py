@@ -4,9 +4,9 @@ from scipy.stats import norm, gamma, t
 import matplotlib.pyplot as plt
 import pyreadr
 from pydantic import BaseModel
-from utils.dist import compute_gaussian_scores, gaussian_pdf, student_pdf
-from utils import get_iqr, madn
-from utils.estimators import Huber, Bisquare, TrimmedMean
+from rstm.dist import compute_gaussian_scores, gaussian_pdf, student_pdf
+from rstm import get_iqr, madn
+from rstm.estimators import Huber, Bisquare, TrimmedMean
 
 dataset_folder = 'rbtm_datasets'
 def figure_2_1():

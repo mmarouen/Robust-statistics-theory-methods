@@ -4,7 +4,7 @@ from scipy.stats import norm, gamma
 import matplotlib.pyplot as plt
 import pandas as pd
 import json
-from utils.dist import compute_gaussian_scores, get_means, fit_gaussian_MLE
+from rstm.estimators import compute_gaussian_scores, get_means, fit_gaussian_MLE
 
 dataset_folder = 'rbtm_datasets'
 

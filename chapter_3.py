@@ -1,8 +1,8 @@
 import numpy as np
 from scipy.stats import norm
 import matplotlib.pyplot as plt
-from utils import madn, mdn, iqr
-from utils.estimators import Huber, Bisquare, TrimmedMean
+from rstm import madn, mdn, iqr
+from rstm.estimators import Huber, Bisquare, TrimmedMean, Category
 
 dataset_folder = 'rbtm_datasets'
 def figure_3_1():
@@ -11,12 +11,13 @@ def figure_3_1():
     data = np.asarray(norm.rvs(loc=0, scale=1, size=total_samples - 1), dtype=np.float32)
     std = np.std(data)
     madn_ = madn(data)
+    verbose = True
 
     x0_s = np.linspace(-5, 5, n_xs)
     # estimators
-    huber = Huber(k=1.37)
-    bisquare = Bisquare(k=4.68)
-    trimmed = TrimmedMean(alpha=0.1)
+    huber = Huber(k=1.37, category=Category.LOCATION.value, verbosity=True)
+    bisquare = Bisquare(k=4.68, category=Category.LOCATION.value, verbosity=True)
+    trimmed = TrimmedMean(alpha=0.1, category=Category.LOCATION.value, verbosity=True)
 
     # initial estimators
     median_0 = np.median(data)
@@ -125,4 +126,4 @@ def figure_3_2():
     plt.show()
 
 if __name__ == '__main__':
-    figure_3_2()
+    figure_3_1()
